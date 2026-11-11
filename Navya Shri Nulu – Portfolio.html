@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Portfolio of Navya Shri Nulu, a software engineer building full-stack apps, AI pipelines and secure systems. Open to Associate Software Engineer roles.">
+<meta name="theme-color" content="#2447F5">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Navya Shri Nulu – Software Engineer">
+<meta property="og:description" content="Full-stack apps, AI pipelines and secure systems. Open to Associate Software Engineer roles.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%91%A9%E2%80%8D%F0%9F%92%BB%3C/text%3E%3C/svg%3E">
+<script>document.documentElement.classList.add('js');</script>
+<title>Navya Shri Nulu – Software Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F1F4F8; --surface:#FFFFFF; --ink:#101828; --muted:#4A5568; --line:#D5DBE5;
+  --accent:#2447F5; --accent-ink:#FFFFFF; --glass:rgba(241,244,248,.82);
+  --display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+  --body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --ease:cubic-bezier(.2,.7,.2,1);
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0B1019; --surface:#131A26; --ink:#EAEFF8; --muted:#A3AEC2; --line:#26303F;
+    --accent:#8AA2FF; --accent-ink:#0B1019; --glass:rgba(11,16,25,.82);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0B1019; --surface:#131A26; --ink:#EAEFF8; --muted:#A3AEC2; --line:#26303F;
+  --accent:#8AA2FF; --accent-ink:#0B1019; --glass:rgba(11,16,25,.82);
+}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 4.5rem);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 var(--body);-webkit-font-smoothing:antialiased;transition:background-color .35s,color .35s}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--glass);z-index:30}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.5rem}
+#bar{position:fixed;left:0;top:env(safe-area-inset-top,0px);height:3px;width:100%;background:var(--accent);transform-origin:0 50%;transform:scaleX(0);z-index:40}
+
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--glass);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);transition:background-color .35s,border-color .35s}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;height:4rem}
+.logo{font:700 1.1rem var(--display);text-decoration:none}
+nav{display:flex;align-items:center;gap:1.25rem}
+nav a{position:relative;text-decoration:none;color:var(--muted);font-weight:500;transition:color .2s}
+nav a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+nav a:hover,nav a.on{color:var(--ink)}
+nav a:hover::after,nav a.on::after{transform:scaleX(1)}
+#theme{width:2.5rem;height:2.5rem;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font-size:1.1rem;transition:transform .4s var(--ease),background-color .35s}
+#theme:hover{transform:rotate(25deg) scale(1.08)}
+
+.hero{padding:4rem 0 4.5rem}
+.status{display:inline-flex;align-items:center;gap:.6rem;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:.35rem .9rem;font-size:.95rem;margin-bottom:2rem}
+.dot{width:.6rem;height:.6rem;border-radius:50%;background:#1FA971;box-shadow:0 0 0 0 rgba(31,169,113,.6);animation:pulse 2.2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 .6rem rgba(31,169,113,0)}100%{box-shadow:0 0 0 0 rgba(31,169,113,0)}}
+.hero h1{font:800 clamp(3.2rem,12vw,8rem)/.95 var(--display);letter-spacing:-.04em;margin:0}
+.line{display:block;overflow:hidden;padding-bottom:.08em}
+.line>span{display:block;transform:translateY(105%);animation:up .9s var(--ease) forwards}
+.line:nth-child(2)>span{animation-delay:.12s}
+@keyframes up{to{transform:none}}
+.hero p.role{font:500 clamp(1.25rem,3vw,1.75rem)/1.3 var(--display);max-width:34rem;margin:2rem 0 1rem}
+.hero p.sub{color:var(--muted);max-width:38rem;margin:0 0 2rem}
+.btns{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-block;padding:.7rem 1.25rem;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--ink);transition:transform .25s var(--ease),background-color .25s,color .25s}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn:hover{transform:translateY(-3px)}
+.btn:not(.primary):hover{background:var(--ink);color:var(--bg)}
+
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));gap:1rem;margin-top:3rem}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1rem 1.1rem;transition:transform .3s var(--ease),border-color .3s}
+.stat:hover{transform:translateY(-4px);border-color:var(--accent)}
+.stat b{display:block;font:800 2rem/1.1 var(--display);letter-spacing:-.02em}
+.stat span{color:var(--muted);font-size:.95rem}
+
+section{padding:3.5rem 0;border-top:1px solid var(--line)}
+section>.wrap>h2{font:700 clamp(1.8rem,4vw,2.5rem)/1.1 var(--display);letter-spacing:-.02em;margin:0 0 2rem}
+
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:1.5rem 2rem}
+.skills h3{font:700 1.05rem var(--display);margin:0 0 .6rem}
+.skills ul,.chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.4rem}
+.skills li,.chips li{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:.15rem .6rem;font-size:.95rem;transition:transform .2s var(--ease),border-color .2s,color .2s}
+.skills li:hover{transform:translateY(-2px);border-color:var(--accent);color:var(--accent)}
+
+.job,.proj{display:grid;grid-template-columns:12rem 1fr;gap:1rem 2.5rem}
+.when{color:var(--muted)}
+.job h3,.proj h3{font:700 1.4rem/1.2 var(--display);margin:0 0 .5rem}
+.where{color:var(--muted);margin:.1rem 0 1rem}
+.job ul.pts{margin:0;padding-left:1.1rem}
+.job li{margin-bottom:.6rem;max-width:42rem}
+
+.proj{padding:2rem 1.25rem;margin:0 -1.25rem;border-bottom:1px solid var(--line);border-radius:14px;transition:background-color .3s,transform .3s var(--ease)}
+.proj:hover{background:var(--surface);transform:translateX(6px)}
+.proj p{margin:0 0 .75rem;max-width:42rem}
+.more{border:0;background:none;color:var(--accent);font:600 1rem var(--body);cursor:pointer;padding:.25rem 0;display:inline-flex;gap:.4rem;align-items:center}
+.more i{font-style:normal;display:inline-block;transition:transform .35s var(--ease)}
+.more[aria-expanded="true"] i{transform:rotate(180deg)}
+.panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s var(--ease)}
+.panel>div{overflow:hidden}
+.panel.open{grid-template-rows:1fr}
+.panel ul{margin:.5rem 0 0;padding-left:1.1rem;color:var(--muted);max-width:42rem}
+
+.edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:2rem}
+.edu h3{font:700 1.15rem var(--display);margin:0}
+.edu p{margin:.15rem 0;color:var(--muted)}
+.certs{list-style:none;margin:0;padding:0}
+.certs li{padding:.55rem 0;border-bottom:1px solid var(--line);transition:padding-left .25s var(--ease),color .25s}
+.certs li:hover{padding-left:.6rem;color:var(--accent)}
+
+.contact p.big{font:500 clamp(1.4rem,4vw,2.2rem)/1.25 var(--display);max-width:36rem;margin:0 0 1.5rem}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.95rem}
+
+/* scroll reveal: only hidden when JS is running */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease);transition-delay:var(--d,0s)}
+.js .rv.in{opacity:1;transform:none}
+
+@media (max-width:640px){
+  .job,.proj{grid-template-columns:1fr}
+  .proj{margin:0;padding:1.5rem 1rem}
+  nav a{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .line>span{transform:none}
+  .js .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div id="bar" aria-hidden="true"></div>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top">Navya Shri Nulu</a>
+    <nav aria-label="Sections">
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <button id="theme" type="button" aria-label="Switch between light and dark mode">◐</button>
+    </nav>
+  </div>
+</header>
+
+<main id="top" class="wrap">
+  <div class="hero">
+    <div class="status"><span class="dot"></span>Open to Associate Software Engineer roles</div>
+    <h1><span class="line"><span>Navya</span></span><span class="line"><span>Shri Nulu</span></span></h1>
+    <p class="role rv">Software engineer who builds full-stack apps, AI pipelines and secure systems.</p>
+    <p class="sub rv" style="--d:.1s">Recent B.Tech graduate in Information Technology from Hyderabad, with strong fundamentals in data structures, OOP, databases and operating systems.</p>
+    <div class="btns rv" style="--d:.2s">
+      <a class="btn primary" href="mailto:nulunavyashri02@gmail.com">Email me</a>
+      <a class="btn" href="https://drive.google.com/file/d/18-rkY4i2TVbxfuSwg7rDdTRINKNXMV_j/view?usp=drivesdk" target="_blank" rel="noopener">Resume</a>
+      <a class="btn" href="https://github.com/NuluNavyaShri" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/navya-shri-nulu" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div class="stats">
+      <div class="stat rv"><b>8.95</b><span>B.Tech CGPA</span></div>
+      <div class="stat rv" style="--d:.08s"><b>6 months</b><span>Internship at Evernorth</span></div>
+      <div class="stat rv" style="--d:.16s"><b>3</b><span>Independent projects</span></div>
+      <div class="stat rv" style="--d:.24s"><b>5</b><span>Certifications</span></div>
+    </div>
+  </div>
+</main>
+
+<section id="skills"><div class="wrap">
+  <h2 class="rv">Skills</h2>
+  <div class="skills">
+    <div class="rv"><h3>Languages</h3><ul><li>Java</li><li>Python</li><li>C</li><li>SQL</li><li>JavaScript</li></ul></div>
+    <div class="rv" style="--d:.08s"><h3>Web</h3><ul><li>HTML</li><li>CSS</li><li>React.js</li><li>REST APIs</li></ul></div>
+    <div class="rv" style="--d:.16s"><h3>Tools and platforms</h3><ul><li>Git</li><li>Firebase</li><li>Android Studio</li><li>ServiceNow</li></ul></div>
+    <div class="rv" style="--d:.24s"><h3>Computer science</h3><ul><li>Data Structures</li><li>OOP</li><li>DBMS</li><li>Operating Systems</li></ul></div>
+  </div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <h2 class="rv">Experience</h2>
+  <div class="job rv" style="margin-bottom:2.5rem">
+    <div class="when">Oct 2026 – Present</div>
+    <div>
+      <h3>Java Full Stack Development Course</h3>
+      <p class="where">Tata STRIVE · Currently enrolled</p>
+      <ul class="pts">
+        <li>Joined in October 2026 and currently training in Java full stack development.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="job rv">
+    <div class="when">Jan 2026 – Jun 2026</div>
+    <div>
+      <h3>Technical Intern</h3>
+      <p class="where">Evernorth, Hyderabad</p>
+      <ul class="pts">
+        <li>Completed full-stack development training covering frontend, backend, REST APIs and relational databases, then applied it to two production-style projects.</li>
+        <li>Built Doubt Connect, a discussion platform where users post questions and collaborate in threaded discussions, using a REST API backend and a relational database.</li>
+        <li>Designed and automated an end-to-end approval workflow on an enterprise low-code platform, removing manual hand-offs and cutting average processing time.</li>
+        <li>Audited application configurations against best-practice checklists and fixed the issues found to improve system stability.</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <h2 class="rv">Projects</h2>
+
+  <article class="proj rv">
+    <div><h3>Multi-Modal Document Abstraction System</h3><ul class="chips"><li>Python</li><li>NLP</li></ul></div>
+    <div>
+      <p>An AI-powered pipeline that reads text, images and tables from mixed-format documents, then writes a concise summary and pulls out the key information.</p>
+      <button class="more" type="button" aria-expanded="false" aria-controls="p1">Details <i>⌄</i></button>
+      <div class="panel" id="p1"><div><ul>
+        <li>Handles three kinds of input in one flow: text, images and tables.</li>
+        <li>Produces both an auto-generated summary and extracted key information.</li>
+        <li>Built with Python and natural language processing techniques.</li>
+      </ul></div></div>
+    </div>
+  </article>
+
+  <article class="proj rv">
+    <div><h3>Cloud-Agnostic Multi-Tenant Key Management System</h3><ul class="chips"><li>Python</li><li>Cryptography</li></ul></div>
+    <div>
+      <p>A secure key management framework for multiple tenants, with AI-driven policy enforcement that automates access decisions.</p>
+      <button class="more" type="button" aria-expanded="false" aria-controls="p2">Details <i>⌄</i></button>
+      <div class="panel" id="p2"><div><ul>
+        <li>Attribute-Based Encryption (ABE) to control who can decrypt what.</li>
+        <li>Deterministic key derivation, so keys can be reproduced without storing each one.</li>
+        <li>Strict tenant isolation, so one tenant's data stays separate from another's.</li>
+        <li>Designed to work across cloud providers.</li>
+      </ul></div></div>
+    </div>
+  </article>
+
+  <article class="proj rv">
+    <div><h3>CraftConnect Global</h3><ul class="chips"><li>Kotlin</li><li>Android Studio</li><li>Firebase</li></ul></div>
+    <div>
+      <p>A multi-vendor e-commerce Android app that connects traditional artisans with customers worldwide.</p>
+      <button class="more" type="button" aria-expanded="false" aria-controls="p3">Details <i>⌄</i></button>
+      <div class="panel" id="p3"><div><ul>
+        <li>Secure sign-in with Firebase Authentication.</li>
+        <li>Real-time data sync across vendor and buyer accounts using Firebase Realtime Database.</li>
+        <li>Product and media storage with Firebase Cloud Storage.</li>
+      </ul></div></div>
+    </div>
+  </article>
+</div></section>
+
+<section id="education"><div class="wrap">
+  <h2 class="rv">Education and certifications</h2>
+  <div class="edu">
+    <div class="rv">
+      <h3>B.Tech, Information Technology</h3>
+      <p>G. Narayanamma Institute of Technology &amp; Sciences</p>
+      <p>2022 – 2026 · CGPA 8.95</p>
+      <h3 style="margin-top:1.5rem">Intermediate (MPC)</h3>
+      <p>Narayana Junior College</p>
+      <p>2020 – 2022 · 96.9%</p>
+    </div>
+    <ul class="certs rv" style="--d:.1s">
+      <li>ServiceNow Certified System Administrator (CSA)</li>
+      <li>Infosys Springboard: Cloud Computing</li>
+      <li>Great Learning: Introduction to Servlets and JSP</li>
+      <li>NPTEL: C Programming</li>
+      <li>CodeChef: C Programming</li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+  <p class="big rv">Hiring for an Associate Software Engineer role? Let’s talk.</p>
+  <div class="btns rv" style="--d:.1s">
+    <a class="btn primary" href="mailto:nulunavyashri02@gmail.com">nulunavyashri02@gmail.com</a>
+    <a class="btn" href="https://drive.google.com/file/d/18-rkY4i2TVbxfuSwg7rDdTRINKNXMV_j/view?usp=drivesdk" target="_blank" rel="noopener">Resume</a>
+      <a class="btn" href="https://github.com/NuluNavyaShri" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn" href="https://www.linkedin.com/in/navya-shri-nulu" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+  <footer>© 2026 Navya Shri Nulu</footer>
+</div></section>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var root=document.documentElement;
+  try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')root.setAttribute('data-theme',t);}catch(e){}
+  document.getElementById('theme').addEventListener('click',function(){
+    var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme:dark)').matches);
+    var n=dark?'light':'dark';root.setAttribute('data-theme',n);
+    try{localStorage.setItem('theme',n);}catch(e){}
+  });
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+  document.querySelectorAll('.more').forEach(function(b){b.addEventListener('click',function(){
+    var open=b.getAttribute('aria-expanded')==='true';
+    b.setAttribute('aria-expanded',String(!open));
+    document.getElementById(b.getAttribute('aria-controls')).classList.toggle('open',!open);
+  });});
+  var bar=document.getElementById('bar');
+  function onScroll(){var h=document.documentElement.scrollHeight-innerHeight;bar.style.transform='scaleX('+(h>0?scrollY/h:0)+')';}
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var links=document.querySelectorAll('nav a');
+  var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id);});}});},{rootMargin:'-45% 0px -50% 0px'});
+  document.querySelectorAll('section[id]').forEach(function(s){so.observe(s);});
+})();
+</script>
+</body>
+</html>
